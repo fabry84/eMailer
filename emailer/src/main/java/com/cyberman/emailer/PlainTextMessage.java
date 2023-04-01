@@ -31,9 +31,11 @@ public  class PlainTextMessage extends Message {
         writer.write( "Date: "+getDate() + "\n"+
                 "From: " + senderName +"<" +getFrom()+ ">\n"+
                 "Subject: " + subject + "\n"+
-                "To: " + getRecipient() + "\n\n");
+                "To: " + getRecipient() + "\n\n"
+                "Message: " + text + "\n\n"    
+                    );
 
-        writer.write( text+"\n");
+       // writer.write( text+"\n");
 
         writer.write(".\r\n");
 
